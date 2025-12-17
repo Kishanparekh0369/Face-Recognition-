@@ -1,0 +1,716 @@
+/* Custom Styles for Face Recognition App */
+body {
+    background-color: #f8f9fa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding-top: 56px;
+    overflow-x: hidden;
+}
+
+/* Full Screen Messages - FIXED FOR ALL DEVICES */
+.fullscreen-message {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    z-index: 9999;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    animation: fadeIn 0.5s ease;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.fullscreen-content {
+    text-align: center;
+    color: white;
+    padding: 20px;
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Success Message */
+.success-icon {
+    font-size: 6rem;
+    color: #4CAF50;
+    margin-bottom: 1.5rem;
+    animation: bounce 1s ease infinite;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+.success-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    line-height: 1.2;
+}
+
+.success-subtitle {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 2rem;
+    color: #FFD700;
+    line-height: 1.2;
+}
+
+.success-avatar-container {
+    margin: 1.5rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.success-avatar {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 6px solid white;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.success-message {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    line-height: 1.4;
+    max-width: 600px;
+}
+
+.success-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 600px;
+}
+
+.success-buttons .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 50px;
+    min-width: 200px;
+    flex: 1;
+    max-width: 250px;
+}
+
+/* Countdown Message */
+.countdown-icon {
+    font-size: 4rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    opacity: 0.9;
+}
+
+.countdown-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    line-height: 1.2;
+}
+
+.countdown-subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #FFD700;
+    line-height: 1.2;
+}
+
+.countdown-circle {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 2rem auto;
+}
+
+.circle-background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.circle-progress {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#4CAF50 0%, transparent 0%);
+    transition: background 1s linear;
+}
+
+.countdown-number {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+}
+
+.countdown-text {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 1rem;
+    line-height: 1.4;
+}
+
+/* Radio Button Section */
+.btn-group {
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.btn-group .btn {
+    flex: 1;
+    padding: 0.75rem 1rem;
+    font-size: 0.95rem;
+}
+
+.btn-group .btn i {
+    margin-right: 0.5rem;
+}
+
+.upload-section-content {
+    animation: fadeInUp 0.5s ease;
+}
+
+@keyframes fadeInUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Regular App Styling */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+.card-header {
+    border-radius: 10px 10px 0 0 !important;
+    padding: 1rem 1.5rem;
+}
+
+.card-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.card-body {
+    padding: 1.5rem;
+}
+
+/* Navigation */
+.navbar {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.navbar-brand {
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Camera Containers */
+.camera-container, .live-camera-container {
+    position: relative;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    min-height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+#video, #live-video {
+    transform: scaleX(-1); /* Mirror the camera view */
+    width: 100%;
+    max-height: 250px;
+    object-fit: cover;
+}
+
+.video-placeholder, .placeholder-text {
+    color: #fff;
+    text-align: center;
+    padding: 2rem;
+}
+
+.video-placeholder i, .placeholder-text i {
+    opacity: 0.7;
+}
+
+/* Recognition Result */
+#recognition-result {
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    min-height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem;
+    border: 2px solid #e9ecef;
+}
+
+#result-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+#result-text {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#result-details {
+    font-size: 0.95rem;
+    color: #6c757d;
+    text-align: center;
+}
+
+/* Matched User Avatar */
+.matched-avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #28a745;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* User Cards */
+.user-card {
+    transition: transform 0.3s, box-shadow 0.3s;
+    border: 1px solid #e9ecef;
+    height: 100%;
+}
+
+.user-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.user-avatar {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid #007bff;
+    margin: 0 auto 1rem;
+    display: block;
+}
+
+.user-card .card-title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.user-card .card-text {
+    font-size: 0.8rem;
+}
+
+/* Form Elements */
+.form-label {
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    padding: 0.75rem 1rem;
+    border: 1px solid #ced4da;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Buttons */
+.btn {
+    border-radius: 8px;
+    padding: 0.6rem 1.2rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    font-size: 0.9rem;
+}
+
+.btn i {
+    margin-right: 0.5rem;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #198754, #157347);
+}
+
+.btn-warning {
+    background: linear-gradient(135deg, #ffc107, #ffca2c);
+    color: #000;
+}
+
+.btn-danger {
+    background: linear-gradient(135deg, #dc3545, #bb2d3b);
+}
+
+.btn-outline-light {
+    color: #f8f9fa;
+    border-color: #f8f9fa;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Group Spacing */
+.d-flex.gap-2 > * {
+    margin-right: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.d-flex.gap-2 > *:last-child {
+    margin-right: 0;
+}
+
+/* Alerts */
+.alert {
+    border-radius: 8px;
+    border: none;
+    padding: 1rem;
+}
+
+.alert-info {
+    background-color: #d1ecf1;
+    color: #0c5460;
+}
+
+.alert-warning {
+    background-color: #fff3cd;
+    color: #856404;
+    border: 1px solid #ffeaa7;
+}
+
+.alert h5 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.alert ul {
+    margin-bottom: 0;
+    padding-left: 1.2rem;
+    font-size: 0.9rem;
+}
+
+.alert li {
+    margin-bottom: 0.25rem;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 2rem 1rem;
+    color: #6c757d;
+}
+
+.empty-state i {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    opacity: 0.5;
+}
+
+.empty-state h5 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Upload Preview */
+#upload-preview {
+    min-height: 120px;
+    max-height: 200px;
+    overflow-y: auto;
+    border: 1px dashed #dee2e6;
+    border-radius: 5px;
+    padding: 8px;
+    background-color: #f8f9fa;
+}
+
+#upload-preview img {
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 4px;
+    border: 2px solid #dee2e6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Full Screen Messages for Mobile */
+    .fullscreen-content {
+        padding: 15px;
+    }
+    
+    .success-icon {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+    
+    .success-title {
+        font-size: 1.8rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .success-subtitle {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+    }
+    
+    .success-avatar {
+        width: 120px;
+        height: 120px;
+        border-width: 4px;
+    }
+    
+    .success-message {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+    
+    .success-buttons {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+    
+    .success-buttons .btn {
+        min-width: 100%;
+        max-width: 100%;
+        padding: 0.7rem 1rem;
+        font-size: 0.9rem;
+    }
+    
+    /* Countdown for Mobile */
+    .countdown-icon {
+        font-size: 3rem;
+    }
+    
+    .countdown-title {
+        font-size: 1.6rem;
+    }
+    
+    .countdown-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .countdown-circle {
+        width: 120px;
+        height: 120px;
+        margin: 1.5rem auto;
+    }
+    
+    .countdown-number {
+        font-size: 2rem;
+    }
+    
+    /* Regular Layout for Mobile */
+    .card-header h3 {
+        font-size: 1.3rem;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+    
+    .camera-container, .live-camera-container {
+        min-height: 200px;
+    }
+    
+    #video, #live-video {
+        max-height: 200px;
+    }
+    
+    #recognition-result {
+        min-height: 200px;
+        padding: 1rem;
+        margin-top: 1rem;
+    }
+    
+    #result-icon {
+        font-size: 3rem;
+    }
+    
+    #result-text {
+        font-size: 1.2rem;
+    }
+    
+    #result-details {
+        font-size: 0.85rem;
+    }
+    
+    .matched-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .user-avatar {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .btn-group {
+        flex-direction: column;
+    }
+    
+    .btn-group .btn {
+        width: 100%;
+        margin-bottom: 0.5rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    
+    .navbar-brand {
+        font-size: 1.1rem;
+    }
+    
+    .success-title {
+        font-size: 1.5rem;
+    }
+    
+    .success-subtitle {
+        font-size: 1.2rem;
+    }
+    
+    .success-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .countdown-title {
+        font-size: 1.4rem;
+    }
+    
+    .countdown-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    #result-text {
+        font-size: 1.1rem;
+    }
+    
+    .alert ul {
+        font-size: 0.85rem;
+    }
+}
+
+/* Fix for small screens */
+@media (max-width: 400px) {
+    .fullscreen-content {
+        padding: 10px;
+    }
+    
+    .success-title {
+        font-size: 1.3rem;
+    }
+    
+    .success-subtitle {
+        font-size: 1.1rem;
+    }
+    
+    .success-message {
+        font-size: 0.9rem;
+    }
+    
+    .success-buttons .btn {
+        padding: 0.6rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    .countdown-title {
+        font-size: 1.2rem;
+    }
+    
+    .countdown-subtitle {
+        font-size: 1rem;
+    }
+    
+    .countdown-circle {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .countdown-number {
+        font-size: 1.8rem;
+    }
+}
+
+/* Ensure buttons are always visible */
+.success-buttons, #cancel-countdown-btn {
+    position: relative;
+    z-index: 10;
+}
+
+/* Fix overflow issues */
+.fullscreen-message {
+    overflow: auto;
+}
+
+.fullscreen-content {
+    min-height: auto;
+}
